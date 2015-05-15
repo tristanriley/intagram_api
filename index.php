@@ -13,7 +13,9 @@
 		<title>tristansRus</title>
 		<!--<meta rel="author" href="humans.txt"> -->
 	</head>
-<?php 
+	<body>
+		<div class="pictures">
+	<?php 
 	//Configuration for PHP server
 	set_time_limit(0);
 	ini_set('default_socket_timeout', 300);
@@ -102,8 +104,7 @@
 ?>
 
 
-	<body>
-
+</div>
 		
 		<!-- Creating a login for people to go and give approval for our web app to access their Instagram Account
 			 After getting aprroval we are now going to have the information so that we can play with it.

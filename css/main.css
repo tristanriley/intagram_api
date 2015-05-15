@@ -10,6 +10,11 @@ body{
   	overflow-x: hidden;
   	padding: 20px 0px 0px 20px;
   	text-align: center;
+ 
+}
+
+img{
+	display: inline-block;
 }
 
 .login{
