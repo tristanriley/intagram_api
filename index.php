@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<header id="header">
+			<h1>Pics of da Fam</h1>
+		</header>
+			<link rel="stylesheet" type="text/css" href="css/main.css"> 
+			<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+			<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+			<meta name="viewport" content="width=device-width">
+			<meta name="viewport" content="width=320">
+			<meta charset="UTF-8">
+		<title>tristansRus</title>
+		<!--<meta rel="author" href="humans.txt"> -->
+	</head>
 <?php 
 	//Configuration for PHP server
 	set_time_limit(0);
@@ -32,7 +47,7 @@
 	}
 	//prints images onto screen
 	function printImages($userID){
-		$url = 'https://api.instagram.com/v1/users/' . $userID . '/media/recent?client_id=' . clientID . '&count=5';
+		$url = 'https://api.instagram.com/v1/users/' . $userID . '/media/recent?client_id=' . clientID . '&count=9';
 		$instagramInfo = connectToInstagram($url);
 		$results = json_decode($instagramInfo, true);
 		//parse through the info
@@ -86,21 +101,14 @@
 	}
 ?>
 
-<!DOCTYPE html>
-<html>
-	<head>
-		<!--<meta charset="utf-8">
-		<meta name="description" content="">
-		<meta name="viewport" content="width098, intitial-scale = 1">-->
-		<title>tristansRus</title>
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<!--<meta rel="author" href="humans.txt"> -->
-	</head>
+
 	<body>
+
+		
 		<!-- Creating a login for people to go and give approval for our web app to access their Instagram Account
 			 After getting aprroval we are now going to have the information so that we can play with it.
 		 -->
-		<div><a href="https://api.instagram.com/oauth/authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code">Login</a></div>
+		<div class="login"><a href="https://api.instagram.com/oauth/authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code">Login</a></div>
 		<!-- <script src="js/main.js"></script> -->
 	</body>
 </html>
