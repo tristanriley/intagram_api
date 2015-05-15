@@ -14,7 +14,7 @@
 		<!--<meta rel="author" href="humans.txt"> -->
 	</head>
 	<body>
-		<div class="pictures">
+		
 	<?php 
 	//Configuration for PHP server
 	set_time_limit(0);
@@ -49,19 +49,20 @@
 	}
 	//prints images onto screen
 	function printImages($userID){
-		$url = 'https://api.instagram.com/v1/users/' . $userID . '/media/recent?client_id=' . clientID . '&count=9';
+		$url = 'https://api.instagram.com/v1/users/' . $userID . '/media/recent?client_id=' . clientID . '&count=6';
 		$instagramInfo = connectToInstagram($url);
 		$results = json_decode($instagramInfo, true);
 		//parse through the info
 		foreach ($results['data'] as $items) {
 			//gives url for each picture in results
 			$image_url = $items['images']['low_resolution']['url'];
-			echo '<img src="' . $image_url . '"/><br>';
+			echo '<img src="' . $image_url . '" class="pic-style"><br>';
 			//saves $img_url
 			savePictures($image_url);
 		}
 	}
 	function savePictures($image_url){
+		return $image_url . '<br>';
 		//echo $image_url . '<br>';
 		//using php to store the emage uro in the variable $filename
 		$filename = basename($image_url);
@@ -104,7 +105,7 @@
 ?>
 
 
-</div>
+
 		
 		<!-- Creating a login for people to go and give approval for our web app to access their Instagram Account
 			 After getting aprroval we are now going to have the information so that we can play with it.

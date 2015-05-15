@@ -13,8 +13,13 @@ body{
  
 }
 
-img{
-	display: inline-block;
+.pic-style{
+	width: 38%;
+	min-height: 100px;
+	background: #fff;
+	box-shadow: 2px 2px 0px #ddd;
+	margin-top: 10px;
+	padding: 12px 2%;
 }
 
 .login{
