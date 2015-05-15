@@ -2,7 +2,7 @@
 <html>
 	<head>
 	<header id="header">
-			<h1>Pics of da Fam</h1>
+			<h1 class="head">Pics of da Fam</h1>
 		</header>
 			<link rel="stylesheet" type="text/css" href="css/main.css"> 
 			<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
@@ -101,7 +101,7 @@
 		printImages($userID);
 	}
 	else{
-	}
+	
 ?>
 
 
@@ -114,3 +114,7 @@
 		<!-- <script src="js/main.js"></script> -->
 	</body>
 </html>
+
+<?php
+}
+?>
